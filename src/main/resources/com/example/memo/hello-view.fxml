@@ -3,22 +3,27 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="697.0" prefWidth="729.0" spacing="20.0" style="-fx-background-color: #070707;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memo.HelloController">
+<VBox alignment="CENTER" prefHeight="697.0" prefWidth="729.0" spacing="20.0" style="-fx-background-color: #070707; -fx-min-height: 600px;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memo.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <ImageView fx:id="imgAnm" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="true" />
 
-    <Label fx:id="storyLine" textAlignment="JUSTIFY" textFill="WHITE">
+    <Label fx:id="storyLine" graphicTextGap="5.0" lineSpacing="10.0" prefHeight="244.0" prefWidth="384.0" textAlignment="JUSTIFY" textFill="#f7f7f7" translateZ="-1.0" wrapText="true">
+      <font>
+         <Font name="Monospaced Regular" size="12.0" />
+      </font></Label>
+    <Button fx:id="buttonNext" focusTraversable="false" onAction="#next" prefHeight="0.0" prefWidth="78.0" style="-fx-background-color: #f7f7f7;" text="Next" textFill="#070707" translateY="77.0">
       <font>
          <Font name="Monospaced Regular" size="13.0" />
-      </font></Label>
-    <Button onAction="#next" prefHeight="12.0" prefWidth="78.0" text="Next" translateY="77.0">
-      <font>
-         <Font name="Chandas" size="15.0" />
-      </font></Button>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
