@@ -8,6 +8,7 @@ import java.io.File;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
@@ -33,12 +34,21 @@ public class HelloController {
 
     @FXML
     protected void next() {
+        String normalPass = "src/main/resources/sounds/normalPass.mp3";
+        AudioClip audioClip = new AudioClip(new File(normalPass).toURI().toString());
         if (position <= texto.length - 1) {
             storyLine.setText(texto[position]);
             if(position > 0) {
                 String urlImage = new File("src/main/resources/imgs/animacao1_" + position + ".png").toURI().toString();
                 Image image = new Image(urlImage);
                 imgAnm.setImage(image);
+                if(position%2 == 0){
+                    audioClip.setPan(-1);
+                }
+                else {
+                    audioClip.setPan(1);
+                }
+                audioClip.play();
             }
         }
         if(position == texto.length) {
@@ -57,9 +67,9 @@ public class HelloController {
             String urlImage = new File("src/main/resources/imgs/animacao1_"+(position + 1)+".png").toURI().toString();
             Image image = new Image(urlImage);
             imgAnm.setImage(image);
+            //teste
         }
         if(position == texto.length + 1) {
-            buttonNext.setText("Fim?");
             String urlMusic = new File("/home/m/Downloads/song_for_my_mom.mp3").toURI().toString();
             MediaPlayer player = new MediaPlayer(new Media(urlMusic));
             player.play();
