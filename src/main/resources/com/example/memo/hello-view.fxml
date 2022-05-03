@@ -13,7 +13,7 @@
     </padding>
    <ImageView fx:id="imgAnm" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="true" />
 
-    <Label fx:id="storyLine" graphicTextGap="5.0" lineSpacing="10.0" prefHeight="244.0" prefWidth="384.0" textAlignment="JUSTIFY" textFill="#f7f7f7" translateZ="-1.0" wrapText="true">
+    <Label fx:id="storyLine" graphicTextGap="5.0" lineSpacing="10.0" prefHeight="303.0" prefWidth="384.0" textAlignment="JUSTIFY" textFill="#f7f7f7" translateZ="-1.0" wrapText="true">
       <font>
          <Font name="Monospaced Regular" size="12.0" />
       </font></Label>
