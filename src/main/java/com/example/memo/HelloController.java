@@ -7,6 +7,7 @@ import java.io.File;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
@@ -28,6 +29,8 @@ public class HelloController {
     @FXML
     private ImageView imgAnm;
 
+    private VBox vboxG;
+
     @FXML
     protected void next() {
         if (position <= texto.length - 1) {
@@ -47,6 +50,7 @@ public class HelloController {
         position++;
     }
 
+    @FXML
     protected void back() {
         if (position <= texto.length - 1) {
             storyLine.setText(texto[position]);
